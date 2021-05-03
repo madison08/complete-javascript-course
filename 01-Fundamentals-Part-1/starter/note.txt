@@ -1,0 +1,120 @@
+JavaScript is dynamically type :
+il definis le type d'une donnes par la valeur que contient sa variable
+
+C'est la valeur qui a un type , pas la variable
+
+Et du coup et variable peut recevoir un type et apres recevoir un autre type
+
+typeof est une fonction qui permet de retourner le type d'une valeur
+
+le type undefined retourne undefined
+
+console.log(typeof null)
+
+devrait retourner null, mais retourne plutot object et c'est une erreur de JavaScript
+qui n'est toujours pas corriger pour des raison heriter 
+
+
+==== les 3 manniere de declarer une variable ((let , const)ES6 , var) ====
+
+une constant on le sait ne doit pas changer tout l'execution du progrmme
+
+une "const" doit etre obligatoirement initialiser a la declaration
+
+Pour nos declaration nous utiliserons toujours const et let quand nous somme sur que la valeur peut changer 
+a un moment donnees 
+
+( c'est une bonne pratique d'avoir peu de variable qui mute)
+
+!!!! nous devons eviter d'utiliser var :
+c'est juste l'ancienne facon de definir des variable avant ES6
+
+
+il est possible d'utiliser un element sans meme le declarer
+Mais cela ne cree par une variable , JavaScript cree une propriete sur l'objet global
+
+
+! la console a acces a toutes les variable en cours d'execution
+
+JavaScript a un ordre de prioriter des operateur bien defini , l'odre dans lequel les operateur sont executer 
+
+On l'appelle "operateur precedence" 
+
+les outils de comparaison comme <, > sont de "12" (valeur de prioriter)
+la soustraction ( - ) est de "14" comme prioriter 
+du coup avec 
+    console.log(3 - 1 > 3 - 2)
+    JavaScript feras les operation a grande prioriter avant ceux a forte prioriter
+    soit les differente soustraction avant la comparaison
+
+    
+
+ES6 -backticks   Generlaement pour des texte un peu long , il est conseiller d'utiliser les backtiscks(` `)
+    et si une variable doit etre afficher dans le backticks sa seras ainsi 
+    ${firstName}
+
+    et c'est beacoup plus pratique que lq concatenation avec ++
+
+
+    convertir une chaine en nombr Number(value)
+    convertir nombre en chaine String(value)
+
+    NaN (not a number), typeof de NaN == Number
+
+La coercition: le faite que javascript convertisse automatiquement de manniere implicite
+
+Ex: chaque fois qu'un operateur traite avec valeur de types differents alors javascript en coulisse ,
+convertir une des valeur pour qu'elle correspondent a l'autre 
+pour qu'a la fin l'operation puisse etre executer
+
+
+VRAI - FAUX
+
+En javascript il n'y a que cinq(5) valeur fausse 
+0, '', null, undefined , NaN
+il deviennent faux quand il sont convertir en booleen
+
+Toutes les autre valeur , sont soit les valeur dites vrai ,
+
+la fonction Boolean(value) , pour convertir en booleen
+
+
+Peu importe la valeur que nous mettons dans le "if(value)"
+javascript essaiera de le convertir en booleen
+
+
+les operateur logique :
+
+##__ ET __##
+
+Du moment que tout est vrai alors la sortie est : VRAI
+Sinon : FAUX
+
+
+##__ OU __## 
+
+Du moment qu'on a un seul vrai alors la sortie est : VRAI
+sinon : FAUX
+
+
+--- Theroy
+
+une expression est un morceau de code qui produit une valeur 
+Ex: 3 + 4
+155 est ausi une expression
+
+Une declaration est comme un plus gros bloc de code qui est executer 
+et qui ne produit pas de valeur en soi
+
+Ex: la declaration if()else{}
+
+ex: 
+if( 23 > 10){
+    const str = "23 is bigger"   
+}
+Ici nous avons une declaration qui contient une expression
+
+
+L'operateur ternaire est une operation et non une declaration
+
+ex: age > 18 ? console.log("hey) : console.log("bye)
