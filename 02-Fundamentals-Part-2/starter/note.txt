@@ -1,0 +1,107 @@
+use strict:
+
+C'est un mode qui nous interdit de faire certaine chose ,
+Il va creer pour nous des erreurs visible
+
+Il existe deux(2) manniere d'ecrire les fonctions 
+
+
+le parametre est le type d'espace reserver , 
+et l'argument est la valeur reel
+
+Une expression de function est jute une fonctions anonyme qui retourne un truc
+-- et les expression produit des valeur 
+
+les fonctions normal peuvent etre appeler , avant meme d'etre definis MAIS
+le expression de function doivent toujours etre declarer avant d'etre utiliser
+
+
+
+La fonction flecher est une forme speciale d'une expression de fonction
+
+Dans le cas de fonctions flecher , quand c'est une one line 
+on peut ommettre le return,
+Alors evidement dans le cas de multi-line on mettre le return
+
+
+Dans les crochets d'un tableau nous pouvons y mettre n'importe quel expression
+ex: friends[friends.length - 1]
+
+Seules les valeur primitive sont immuable ...
+--> un tableau constant peut changer de valuer au cours du programme ,
+tandis qu'une simple variable ne le peux pas 
+
+(Mias nous pouvons pas remplacer le tableux de manniere entiere)
+
+JavaScript a plusieur methodes integrer qui nous vraiment utiles a la manipulation des tableau
+
+Ex ---> arrayName.push(item)  ---> permet d'ajouter des elements a la fin d'un tableau 
+   ----> arrayName.unshift(item) --> permet d'ajouter un element au tout debut du tableau
+
+   ces methodes nous renvoie la longueur du nouveau tableu
+
+On aussi >>> arrayName.pop()  --> il supprimeras le dernier element du tableu 
+(dans ce cas le pop n'a pas besoin qu'on lui passe un argument --> et c'est parcequ'il d'information neccessaire pour supprime le dernier element d'un tableau)
+pop() retourne le dernier element supprimer 
+
+On a aussi arrayName.shift() qui permet de supprimer le premier element du tableau 
+
+arrayName.indexOf(key) ===> cela retourne l'index de l'ement entrer
+Si nous faisons pareil sur un element qui n'est pas dans le tableau alors il retourneras -1
+
+
+On aussi une methode plus cool qu'indexOf
+
+--> arrayName.include(element)   --> elle nous retourne "True" si l'element rechercher exite dans le tableau et "False" si c'est pas le cas biensure 
+Et ces methode utilise l'egaliter stricte
+
+
+Nous utiliserons les tableaux pour des donnees en ordre,
+Nous uitliserons les objets pour les donnees plus structurer 
+
+
+Pour reccuperer les valuer d'un objets nous pouvons le faire de deux(2)
+manniere :
+   objectName.propertyName
+   objectName["propertyName"]
+
+
+   la difference est que dans la notations entre "crochet" nous pouvons mettre toute expression que nous souhaitons
+
+   Sinon nous devons faire un calcul avant d'utiliser la proprieter 
+   alors nous utiliserons la notation avec crochet 
+
+   Sinon la notation par point
+
+    
+
+   Pour ajouter une nouvelle proprieter a notre objet il
+   suffit d'ecrire le nom de la proprieter puis sa valeur 
+   Ex: objectName.newAddPropertyName = "value"
+   Ex: objectName.[newAddPropertyName] = "value"
+
+
+
+Une fonction est ausi une valeur du coup ,
+une fonction peu etre utiliser comme valeur d'une proprieter dans un objet
+
+Toute fonction qui est attacher a un objet est une methode 
+
+
+la variable this est fondamentalement egale a l'objet sur lequel la methode est appele
+
+
+Nous deux declarations importante au noveau de la boucle for 
+ << continue >> and << breaking >>
+
+ continue : permet de quitter l'iteration actuelle de la boucle et passez au suivant
+ break : permet de terminer completement la boucle
+
+
+ la boucle : 
+
+ la boucle while ne doit dependre d'aucune variable de compteur ,
+ cahque qu'on a besoin d'une boucle sans compteur on utilise la boucle while 
+
+ (Autrement quand on connais le nombre d'iteration on utilise la boucle for )
+
