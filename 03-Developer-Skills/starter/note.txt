@@ -1,0 +1,104 @@
+
+
+install live server
+
+sudo npm install live-server -g 
+
+run server
+
+live-server
+
+-- Learn code
+
+ - Detrminer son objectif
+ - Ne pas passez a autre chose si on a pas compris ( coder vraiment)
+ - Apres avoir appris un nouveau concept , il faut le mettre en pratque pour renforcer au niveau du cerveau
+ - Pratiquez en dehors du cours ( Rendre les tache dificile et grandir en surmontant les obstacles)
+ - Nous ne devons pas etre frustre a ecrire du code qui n'est pas efficace (juste ecrire du code pas forcement de qualiter) 
+ - Ne pas etre demotiver quand sa marche pas , on finis jamais d'apprendre (Ne pas se comparer aux autres developpeur
+ - Ne pas apprendre de manniere isoler ( apprendre avec d'autre personne ) , chaque apres avoir appris quelque chose nous pouvons l'expliquer a qqn
+ cela nous oblige a mieux cmprendre -- la meilleur manniere d'apprendre est d'enseigner
+ - Apres avoir terminer un cours ne signifie pas qu'on est pret en tant que developpeur (mais tout ces conseil ferons de nous des veritable devs )
+
+ just keep coding and keep building
+
+ APPRENDRE A RESOUDRE DES PROBLEME
+
+ - Toujours rester calme et ralentir et pas seulement sauter sur une solution sans avoir de plan
+ - Lorsque nous resolvons des probleme nous devons etre dans une approche logique et rationnelle
+
+ Ensuite 4 eteapes pou RESOUDRE:
+ -> S'assurer qu'on comprends a 100% le probleme
+ -> Diviser oour vaincre : briser le gros probleme en autant de petit probleme que possible,
+ ces petits probleme sont beaucoup plus facile a comprendre
+ -> Si nous ne savons pas comment resoudre l'un des sous probleme ,
+ Alors il faut faire autant de recherche que neccessaire 
+
+ -> Nous deons ecrire des pseudo code pour resoudre notre probleme, 
+ avant d'ecrire du code reel (un peu de l'algo)
+
+ conseil: Developper une veritable curiositer et passion,
+ pour comprendre comment les choses fonctionne reelement .. pas seulement en programmation
+ mais dans le monde autour de nous
+
+
+ Debogage: 
+
+ Trouver et corriger les erreur 
+
+ Un bug logiciel : est un defaut ou un probleme dans un programme informatique  
+ (Donc fondamentalement tout comportement inatendu ou involontaire est appeler bogue )
+
+
+Le procesus pour du debogage: 
+
+1 =>>> Etre reelement conscient qu'il y'a une sorte de bug 
+(les bug peuvent paser inapercu pendant des annees ) 
+La decouverte de bug se produit generalement pendant le developpement a l'aide 
+d'un test automatiser ou rapport utilisateur pendant la production 
+
+les bug identifier lors de la production sont les pires bug ,
+parce qu'il n'ont pas ete decouvert pendant le developpement et affecte 
+de vrai utilisateur
+
+c'est il faut vite identifer les bug en fesant des testes automatiser
+
+(prendre en compte le context du bug -- souvent il se produit seulement sur 
+sur certains navigateur 
+)
+
+
+2 =>>> Entrer dans notre code et trouver le bug
+(Nous devons identifier ou exactement on a le bug)
+methods: 
+    - Developper console (Code simple)
+    - Debugger (Code complex)
+
+3 =>>>> Fixer le bug que nous avons trouver
+
+Remplacer l'existant qui a l'erreur
+par une nouvelle solution correcte
+
+4 =>>> Nous devons eviter se bogue dans notre base de code 
+
+(Nous pouvons rechercher dans notre code un bug similaire, comme dans une fonction similaire )
+si le bug se repete nous devons le coriger partout 
+
+le moyen le plus simple d'eviter , consite a rediger des test avec un logiciel de teste 
+
+
+console.table(objectName) : format un objet sous format de tableau
+
+
+
+On peut deboguer avec l'inspecteur de commande 
+
+Nous pouvons definis quelque point d'arret
+(le programme s'arreta une arriver a ce point )
+
+l'execution se fige et nous montre a quoi ressemble l'execution,
+et cela inclut toutes les valeur 
+
+On peut inserer : Debugger 
+a une ligne de notre code javaScript ce qui redirigeras directement 
+dans le debugger 
