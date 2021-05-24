@@ -1,0 +1,34 @@
+
+DOM (Document object modal)
+
+C'est une representation structurer de documents HTML
+Il nous permet d'utiliser javascript pour acceder aux elements HTML
+et les styles afin de les manipuler 
+
+C'est un point de connexion entre HTML et javascript
+
+Il est automatiquement cree par le navigateur des le chargement de la page 
+
+Sa Structure ressemble a un arbre genealogique , on utilise les terme comment parent ,enfant, frere etc ...
+
+Le DOM commence toujours par l'object ==> "" DOCUMENTS ""
+
+le DOM ne fais pas partie du language JAVASCRIPT 
+
+les methodes du DOM et ces proprieter font partie de quelque chose apeler les API WEB
+
+les API Web sont des bibliotheque ecrites en JAVASCRIPT et qui sont automatiquement disponible pour nous
+et il existe une specification que les navigateur implemente
+et il existe des tonne d'API comme fetch etc. ...
+
+
+DRY (Do not repeat yourself)
+
+le probleme avec le faite de se repeter est qu'apres avoir implementer une fonctionnaliter a la modification 
+nous devrions modifier partout ou le code est repeter
+
+REFRACTORING 
+signifie essentiellement refactoriser le code mais sans changer son fonctionnement 
+et donc fondamentalement nous refactorisons pour ameliorer et eliminer le code en double 
+
+la premiere etape consiste a identifier les doublons 
