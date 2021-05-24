@@ -1,0 +1,3 @@
+Nous devons utiliser la fonctionnaliter d'ajouter et de retirer des classes tout le temps
+afin de modifier l'apparence de notre page
+pour interagir avec plusieur proprieter CSS en un seul
