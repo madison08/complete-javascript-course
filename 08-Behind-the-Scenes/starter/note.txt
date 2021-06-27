@@ -1,0 +1,225 @@
+JavaScript est un prototype de haut niveau , orienter objet , multi-paradigme interpreter et compiler
+juste a temps dynamique , mono-thread , language de programmation garbage-collecter avec des fonctions de premier ordre
+et un modele de concurrence de boucle d'evenements non bloquante 
+
+Haut niveau : les language de haut niveau nous evite de gerer les ressources parceque les language ont des abstraction
+qui nous enleve tout ce travail , cela rend le language plus facile a apprendre mais l'incovenient c'est que les language ne seront jamais aussi 
+rapide que les programme en C 
+
+Garbage-collected ---> (Collecteur-d'ordure): Un outils qui nous eloigne le gestion de memoire
+c'est un algorithme dans le moteur de JavaScript qui supprime automatiquement les objets inutiliser afin de ne pas l'obstruer de chose 
+inutile  (ainsi JS a un nettoyeur qui nettoie notre memoire de temps en temps afin que nous n'ayons pas a le faire manuellement dans notre code)
+
+interpreter --> Notre code est traduit compiler en language machine (interpreter ou compiler ) 
+dans le cas de JS cette interpretation est faite dans son moteur 
+
+(ce qui rend js populaire)
+Multi-paradigme --> un paradigme est une approche et un etat d'esprit globale de structuration de notre codde qui dirigeras finalement
+le style et la technique de codage 
+les trois paradigme populaire sont:
+- procedurale (organier le code de maniere tres lineaire)
+- orienter objet () ==> c'est une approche baser sur un prototype et orienter objet 
+- programmation fonctionnelle 
+
+les paradigme peuvent etre "imperative" ou "declarative"
+
+Nous pouvons utiliser le paradigme que nous souhaitons
+
+Tout est objets en JavaScript sauf les valeur primitive
+
+
+first-class functions (Fonctions de premiere ordre) --> Signifie que les fonctions sont traiter comme des variables reguliere
+ainsi nous pouvons passer des fonction dans une fonction , nous pouvons meme renvoyez une fonction a partir de fonctions 
+
+Dynamique --> En faite typer dynamiquement , nous n'affectons pas de type de donnees aux variables , les type sont connus quand JavaScript execute notre code 
+En outre le type peut etre facilement modifier au fur et a mesure que nous reaffectons des variables 
+
+1-Single-threaded --> (fil unique) 
+2-Non-blocking event --> (modele d'acces concurrentielle a boucle d'evenements non bloquante)
+
+2: --> Cela signifie comment le moteur JavaScript gere plusieurs tache se passe en meme temps
+et nous en avons besoin parceque JavaScript lui meme fonctionne dans un seul thread (une seule chose a la fois)
+Nous avon besoin d'un moyen afin de permettre que plusieurs choses se produise en meme temps
+un fil est comme un ensemble d'instruction qui est execute dans le processeur de l'ordinateur 
+
+Et nous voulons un comportement non bloquant 
+
+en utilisant une soit-disante "boucle d'evenements" 
+la boucle d'evenements prends des tache de longue durer les execute en arriere plan
+puis les remet dans le fil principal 
+
+
+
+// LE MOTEUR JAVASCRIPT 
+
+Un moteur JavaScript est donc tout simplement un programme informatique qui execute du code JavaScript
+
+Chaque navigateur a son propre moteur JavaScript
+mais le moteur le plu connu est le V8 de GOOGLE
+V8 --> alimente aussi Node.js qui est ce "runtime" (que nous pouvons utiliser pour creer des applications coter serveur)
+
+Un moteur JavaScript contient toujours:
+Call stack (une pile d'appels) et Heap (un tas)
+
+Call Stack: est l'endroit ou notre code est reelement executer
+en utilisant uelques choses appeler "context d'execution"
+
+Heap : est un pool de memoire non structurer qui stocke tous les objets dont notre applications a besoin (in memory)
+
+{{  Compilation vs Interpretation }}
+
+Compilation: Tout le code source est convertir en code machine a la fois et ce code machine est a la fois .
+Ce code machine est ecrit dans un fichier portable qui peut etre executer sur n'impote quel machine 
+ 
+ Nous avons 2 etpes :
+ le code est construit ,
+ puis il est executer dans le CPU donc le processeur
+  Et il est executer apres la compilation biensur 
+  (par exemple toute applications que nous utilisons sur notre machine a ete compiler avant)
+ Et nous l'executons bien apres sa compilation 
+
+ Interpreteur:
+
+ Il parcours le code source et l'execute ligne par ligne 
+Ici le code est lu et executer en meme temps 
+le code source est convertir en code machine juste avant son execution et pas a l'avance 
+
+les language interpreter sont beaucoup lent que les language compiler 
+avant JavaScript etait interpreter mais plus maintenant
+
+Au lieu d'une simple interpretation JavaScript Moderne utilise desormais un melange
+entre compilation et interpretation qui s'appelle
+Just-in-time(JIT) compilation --> la compilation juste a temps 
+
+cette approche compile essentiellement tout le code dans le code machine a la fois , puis l'execute immediatement 
+
+Nous avons deux(2) etapes:
+compilation --> execution
+
+mais il n'y a pas de fichier portable a executer ,
+et l'execution a lieu immediatement apres une compilation
+
+
+
+
+Les API web sont des fonctionnaliter fournies au moteur mais qui n'en font pas partie
+du language JavaScript lui meme 
+
+JavaScript accede a ces API a travers l'objet globale "window" les api web font partie 
+du runtime 
+
+un runtiem est comme une boite qui contient touts les element JavaScript dont nous 
+avons besoin 
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!
+
+Un context d'execution est un environement dans lequel s'execute un morceau de code ,
+le code JavaScript s'execute toujours dans un context 
+
+un nouveau context se cree a l'appel de Chaque fonctions
+
+ce qui se trouve dans un context d'execution , se sont :
+
+-les variables d'environement
+toutes nos variable, functions et objet d'argument speciaux y sont stocker
+- la chaine de porter (scope chain)
+la chaine de porter se compose de reference a des variable localiser
+-this
+
+chaque context recoit egalement le mot cle "this"
+
+
+les context d'execution appartenant aux fonctions flecher n'ont pas leurs 
+mots cle "arguments", n'ont pas non plus "this"
+
+Mais par contre il peuvent utiliser pour leur parent reguliere le plus proche
+
+
+The call stack (la pile d'appel):
+
+c'est un endroit ou les contexte d'execution peuvent s'empiler les uns aux autres
+fin de garder une trace d'ou nous sommes dans l'execution de notre programme
+
+le context d'execution qui est au dessus de la pile est celui qui est actuellement en cours 
+d'execution et quand il finis , il seras retirer de la pile et l'execution reviendras au context d'execution 
+precedent
+
+
+SCOPE !!!!!!!!
+
+la portee controle la facons dont les variable de notre programme sont organiser et 
+accesible par le moteur de JavaScript 
+
+la portee est l'espace ou l'environement dans laquelle une certaine variable est declaree 
+
+
+Nous avons 3 types de scope en JavaScript
+
+-Global scope : ce sont des variable declarer en dehors de tout bloc ou fonctions ces variables seront disponible partout (toute fonction et tout bloc)
+-Function scope : les variables declarer a l'interieur d'une fonction ne sont disponible que dans cette fonction (porter local)
+-block scope: a partir d'ES6 les block ont aussi une portee , (les accolades ) , tout ce qui seras declarer a l'interieur ne seras disponible qu'a l'interieur des block
+!!! la diff avec les bloc elle s'applique uniquement avec les variable declarer avec let et const
+si c'est declarer avec "var" alors la variable peut etre disponible en dehors du bloc
+
+
+l chaine de portee obtient les environement de variable depuis le context d'execution 
+
+l'ordre dans lequel sont apaller les fonction n'ont rien a voir avec la porter des variable
+
+
+
+Le hosting permet au code d'etre accessible/utilisable avant d'avoir ete declarer
+
+
+En veriter le code est scanner pour les declaration de variable avant son execution.
+cela se realise a la phase de creation du context d'execution 
+
+( la creation de variable avec "var" creeras la variable sur l'objet de fenetre window)
+
+
+
+le mot cle this est une variable special cree dans chaque context d'execution et donc toute fonction
+le mot this prends toujours la valeur du proprietaire
+
+Sa manniere de e comporter depend de la manniere dont la fonction est appeler
+
+on peut l'appeler dans une fonction contenu dans un objet alors this pointeras sur l'objet
+
+le mot cle this pointe toujours sur l'objet qui appelle la methode
+
+
+les types primtifs s'execute dans la pile d'appels(call stack) et les type referent (object ... array, funct,object litteral ..)
+s'execute dans le tas (heap)
+
+
+les variable avec cont sont immuable seulement avec les type primitifs
+
+
+Object.assign permet de copier toutes les proprieter d'un objet a un autre
+(il faire un clone superficielle et non un clone profond)
+
+le clonage profond n'est pas chose facile , on utilise generalement la bibliotheque lodash 
+pour gerer cela
+
+
+Ex: 
+
+const madison = {
+    year: 1998,
+    calcAge: function(){
+        console.log(this)
+    }
+}
+
+madison.calcAge()
+
+
+const madCop = Object.assign({}, madison)
+
+madCop.year = 2020
+
+console.log(madCop)
